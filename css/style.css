@@ -10,7 +10,7 @@
 
 
 body{
-    background-color: black;
+    background-color: rgb(5, 5, 5);
     font-family: "Bebas Neue", sans-serif;
     color: white;
 }
@@ -21,7 +21,7 @@ body{
 }
 
 .headerI {
-    background-image: url(images/bg.jpg);
+    background-image: url(../images/bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -399,7 +399,7 @@ input , textarea{
  /* Comienzo de Nosotros CSS*/
 
  .header {
-    background-image: url(images/fondoCinema.jpg);
+    background-image: url(../images/fondoCinema.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
