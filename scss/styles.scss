@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import './variables';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+@mixin bg-color($color:rgb(5, 5, 5)){
+    background-color: $color;
 }
 
-
 body{
-    background-color: rgb(5, 5, 5);
-    font-family: "Bebas Neue", sans-serif;
-    color: white;
+    @include bg-color(black);
+    font-family: $font-body;
+    color: $primary-color;
 }
 
 .container {
@@ -42,7 +37,8 @@ body{
 
 .logo{
     font-size: 35px;
-    color: white;
+    color: $primary-color;
+    text-decoration: none;
 }
 
 .menu .navbar ul li {
@@ -53,13 +49,14 @@ body{
 .menu .navbar ul li a{
     font-size: 22px;
     padding: 20px;
-    color: white;
+    color: $primary-color;
     display: block;
+    text-decoration: none;
 
 }
 
 .menu .navbar ul li a:hover {
-    color: red
+    color:$secundary-color;
 }
 
 #menu {
@@ -110,8 +107,8 @@ body{
 .btn-1 {
     display: inline-block;
     padding: 7px 20px ;
-    background-color: red;
-    color: white;
+    background-color: $secundary-color;
+    color: $primary-color;
     font-size: 20px;
 }
 
@@ -119,17 +116,16 @@ body{
     width: 110px;
     display: inline-block;
     padding: 7px 20px;
-    background-color: red;
+    background-color: $secundary-color;
     font-size: 20px;
     margin-top: 30px;
-    color: white;
+    color: $primary-color;
 }
 
 
 .movies {
+    @extend%moviesflexcolumn;
     padding: 50px 0 0 0;
-    display: flex;
-    flex-direction: column;
 }
 
 h2{
@@ -185,16 +181,16 @@ hr {
     display: inline-block;
     padding: 10px 25px;
     border-radius: 15px;
-    border: 1px solid red;
-    color: red;
+    border: 1px solid $secundary-color;
+    color: $secundary-color;
     font-size: 16px;
     cursor: pointer;
     align-self: flex-end;
 }
 
 .load-more:hover {
-    background-color: red;
-    color: white;
+    background-color: $secundary-color;
+    color: $primary-color;
 }
 
 .content img{
@@ -208,7 +204,7 @@ hr {
 }
 
 .content {
-    color: white;
+    color:$primary-color;
     font-size: 20px;
 }
 
@@ -229,21 +225,21 @@ hr {
 }
 
 .footer a {
-    color: white;
+    color: $primary-color;
     font-size: 20px;
     margin-right: 20px;
     display: block;
 }
 
 .footer a:hover{
-    color: red;
+    color: $secundary-color;
 }
  
 
 /* Inicio de CCS para Contacto */
 
 h2 a{
-    color: white;
+    color: $primary-color;
 }
 
 .body-contacto{
@@ -256,7 +252,7 @@ h2 a{
 
 form {
     padding: 50px 55px;
-    box-shadow: 0 0 20px rgba(red, green, blue, alpha);
+    box-shadow: 0 0 20px;
     border-radius: 20px;
     text-align: center;
     width: 340px;
@@ -274,7 +270,7 @@ form h2 {
 }
 
 .form-txt a{
-    color: white;
+    color: $primary-color;
     text-decoration: none;
     font-size: 15px;
     margin-bottom: 25px;
@@ -292,7 +288,7 @@ input , textarea{
     border: 0;
     border-radius: 10px;
     font-size: 15px;
-    color:white;
+    color:$primary-color;
 }
 
 ::placeholder{
@@ -407,9 +403,3 @@ input , textarea{
     display: flex;
     align-items: center;
 }
-
-
-
-
-
-
